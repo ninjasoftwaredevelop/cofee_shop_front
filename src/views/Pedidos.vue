@@ -1,14 +1,20 @@
 <template>
-    <div class="main-contanier">
-       <h1>Pedidos</h1>
+    <div class="d-flex justify-content-center">
+       
+       <CompPedidos />
     </div>
 
 </template>
 
 
 <script>
+import CompPedidos from '../components/CompPedidos.vue'
+
 export default {
-    name: "Pedidos"
+    name: "Pedidos",
+    components : {
+        CompPedidos,
+    }
 }
 </script>
 
