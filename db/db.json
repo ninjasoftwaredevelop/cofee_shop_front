@@ -111,20 +111,17 @@
       "cliente": "Rafael Santos",
       "produto": "Cafe Puro",
       "valor": 5.9,
-      "status": "Solicitado"
+      "status": "Finalizado"
     },
     {
-      "id": 2,
-      "cliente": "Arthur",
-      "produto": "Cafe Leite",
-      "valor": 6,
-      "status": "Solicitado"
+      "cliente": "rafael",
+      "produto": "323",
+      "id": 18
     },
     {
-      "cliente": "Bolsonaro",
-      "produto": "Quick",
-      "id": 3,
-      "status": "Em produção"
+      "cliente": "Joao",
+      "produto": "13123",
+      "id": 19
     }
   ],
   "clientes": [
@@ -153,8 +150,7 @@
     {
       "id": 4,
       "tipo": "Finalizado"
-    }
-    ,
+    },
     {
       "id": 5,
       "tipo": "Cancelado"
