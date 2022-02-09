@@ -22,6 +22,7 @@ export default {
         bottom: 0;
         width: 100%;
         position:absolute;
+        clear: both;
     }
     #footer h4 {
         color: #fcba03;

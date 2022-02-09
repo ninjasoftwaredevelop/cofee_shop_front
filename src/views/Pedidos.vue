@@ -1,10 +1,12 @@
 <template>
-  <div class="d-flex justify-content-center">
-    <CompPedido />
-  </div>
-  <div class="d-flex justify-content-center">
-    <CompPedidos />
-  </div>
+  <div class="conteudo">
+    <div class="d-flex justify-content-center">
+      <CompPedido />
+    </div>
+    <div class="d-flex justify-content-center">
+      <CompPedidos />
+    </div>
+</div>
 </template>
 
 
@@ -23,4 +25,7 @@ export default {
 
 
 <style scoped>
+#conteudo {
+  max-width: 100%;
+}
 </style>

@@ -1,4 +1,5 @@
 <template>
+ <div class="container">
   <div id="cafe-table">
     <div>
       <div id="cafe-table-heading">
@@ -29,11 +30,12 @@
               :selected="cafe.status == s.tipo"
             >
               {{ s.tipo }}
+              
             </option>
           </select>
         </div>
 
-        <button class="delete-btn" @click="deleteCafe(cafe.id)">
+        <button class="delete-btn" @click="deleteCafe(cafe.id)"  >
           Cancelar
         </button>
         <button class="sucess-btn" @click="deleteCafe(cafe.id)">
@@ -41,6 +43,7 @@
         </button>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -52,6 +55,7 @@ export default {
       cafes: null,
       cafes_id: null,
       status: [],
+      teste: true,
     };
   },
   methods: {
@@ -59,12 +63,20 @@ export default {
       const req = await fetch("http://localhost:3004/pedidos");
       const data = await req.json();
       this.cafes = data;
-      this.getStatus()
-    }, async getStatus() {
-        const req = await fetch('http://localhost:3004/status')
-        const data = await req.json()
-        this.status = data
-      },
+      this.getStatus();
+    },
+    async getStatus() {
+      const req = await fetch("http://localhost:3004/status");
+      const data = await req.json();
+      this.status = data;
+    },
+    async deleteCafe(id) {
+      const req = await fetch(`http://localhost:3004/pedidos/${id}`, {
+        method: "DELETE",
+      });
+      const res = await req.json();
+      this.getPedidos();
+    },
     async updateCafe(event, id) {
       const option = event.target.value;
       const dataJson = JSON.stringify({ status: option });
@@ -123,7 +135,7 @@ select {
   border: 2px solid #222;
   padding: 10px;
   font-size: 16px;
-  margin: 0 auto;
+  margin: auto auto;
   cursor: pointer;
   transition: 0.5s;
 }
