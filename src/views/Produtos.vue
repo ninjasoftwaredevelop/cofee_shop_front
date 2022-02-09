@@ -3,7 +3,7 @@
     <TLproduto />
 
     <div class="d-flex flex-row">
-      <h2>Vai aparecer aki</h2>
+      
     </div>
   </div>
 </template>

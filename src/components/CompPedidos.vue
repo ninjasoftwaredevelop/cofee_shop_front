@@ -31,10 +31,14 @@
               {{ s.tipo }}
             </option>
           </select>
-          <button class="delete-btn" @click="deleteCafe(cafe.id)">
-            Cancelar
-          </button>
         </div>
+
+        <button class="delete-btn" @click="deleteCafe(cafe.id)">
+          Cancelar
+        </button>
+        <button class="sucess-btn" @click="deleteCafe(cafe.id)">
+          Entregue
+        </button>
       </div>
     </div>
   </div>
@@ -44,23 +48,37 @@
 export default {
   name: "CompPedidos",
   data() {
-      return {
-    cafes: null,
-    cafes_id: null,
-    status: [],
-  } 
- },
+    return {
+      cafes: null,
+      cafes_id: null,
+      status: [],
+    };
+  },
   methods: {
     async getPedidos() {
-      const req = await fetch("http://localhost:3004/cafes");
+      const req = await fetch("http://localhost:3004/pedidos");
       const data = await req.json();
       this.cafes = data;
-     
-    }
+      this.getStatus()
+    }, async getStatus() {
+        const req = await fetch('http://localhost:3004/status')
+        const data = await req.json()
+        this.status = data
+      },
+    async updateCafe(event, id) {
+      const option = event.target.value;
+      const dataJson = JSON.stringify({ status: option });
+      const req = await fetch(`http://localhost:3004/pedidos/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson,
+      });
+      const res = await req.json();
+      console.log(res);
     },
-    mounted(){
-        this.getPedidos()
-   
+  },
+  mounted() {
+    this.getPedidos();
   },
 };
 </script>
@@ -111,6 +129,22 @@ select {
 }
 
 .delete-btn:hover {
+  background-color: transparent;
+  color: #222;
+}
+
+.sucess-btn {
+  background-color: rgb(10, 2, 114);
+  color: #fcba03;
+  font-weight: bold;
+  border: 2px solid #222;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sucess-btn:hover {
   background-color: transparent;
   color: #222;
 }

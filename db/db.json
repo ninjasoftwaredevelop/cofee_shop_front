@@ -105,32 +105,26 @@
       "id": 22
     }
   ],
-  "cafes": [
+  "pedidos": [
     {
       "id": 1,
       "cliente": "Rafael Santos",
       "produto": "Cafe Puro",
-      "valor": 5.9
+      "valor": 5.9,
+      "status": "Solicitado"
     },
     {
       "id": 2,
       "cliente": "Arthur",
       "produto": "Cafe Leite",
-      "valor": 6
+      "valor": 6,
+      "status": "Solicitado"
     },
     {
-      "id": 1,
-      "cliente": "Joao Paulo ",
-      "produto": ["pera","maça"],
-      "valor": 7.00
-    },
-    {
-      "id": 4,
-      "nome": "Finalizado Entregue"
-    },
-    {
-      "id": 5,
-      "nome": "Pedido Cancelado"
+      "cliente": "Bolsonaro",
+      "produto": "Quick",
+      "id": 3,
+      "status": "Em produção"
     }
   ],
   "clientes": [
@@ -141,6 +135,29 @@
     {
       "id": 2,
       "nome": "Joao Paulo"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Pagamento Aprovado"
+    },
+    {
+      "id": 3,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 4,
+      "tipo": "Finalizado"
+    }
+    ,
+    {
+      "id": 5,
+      "tipo": "Cancelado"
     }
   ]
 }
