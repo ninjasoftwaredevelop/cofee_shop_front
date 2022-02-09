@@ -9,11 +9,13 @@ import Navbar from './components/navbar.vue'
 import Footer from './components/footer.vue'
 import TLproduto from './components/TLproduto.vue'
 
+
 export default {
   components: {
     Navbar,
     Footer,
     TLproduto,
+   
   },
   data(){
     return {

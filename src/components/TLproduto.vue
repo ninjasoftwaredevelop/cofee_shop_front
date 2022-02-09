@@ -11,12 +11,12 @@
             placeholder="Nome da Bebida"
           />
         </div>
-        <div class="col">
+        <div class="col-2">
           <input
             v-model="preco"
             type="text"
             class="form-control"
-            placeholder="Valor"
+            placeholder="Valor R$ 0,00"
           />
         </div>
         <div class="col">
@@ -53,15 +53,14 @@ export default {
   },
   methods: {
     async createProduto(e) {
-      
       e.preventDefault();
       const data = {
         nome: this.nome,
         preco: this.preco,
       };
-   
+
       const dataJson = JSON.stringify(data);
-      console.log(dataJson)
+      console.log(dataJson);
       const req = await fetch("http://localhost:3004/produtos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -70,9 +69,9 @@ export default {
 
       const res = await req.json();
 
-       // limpar campos
-      this.nome = ""
-      this.preco= ""
+      // limpar campos
+      this.nome = "";
+      this.preco = "";
     },
   },
 };
@@ -85,6 +84,6 @@ export default {
   top: 50%;
   margin-left: -300px;
   margin-top: -250px;
+  width: 50%;
 }
-
 </style>

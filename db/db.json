@@ -58,28 +58,73 @@
       "nome": "Bruno",
       "preco": "20",
       "id": 13
+    },
+    {
+      "nome": "ease",
+      "preco": "ea",
+      "id": 14
+    },
+    {
+      "nome": "qer",
+      "preco": "rw",
+      "id": 15
+    },
+    {
+      "nome": "ewqeqw",
+      "preco": "eqwe",
+      "id": 16
+    },
+    {
+      "nome": "qweqw",
+      "preco": "eqwe",
+      "id": 17
+    },
+    {
+      "nome": "qweqw",
+      "preco": "eqweqw",
+      "id": 18
+    },
+    {
+      "nome": "eqwe",
+      "preco": "eqw",
+      "id": 19
+    },
+    {
+      "nome": "123",
+      "preco": "123",
+      "id": 20
+    },
+    {
+      "nome": "ew",
+      "preco": "ewe",
+      "id": 21
+    },
+    {
+      "nome": "Toddy",
+      "preco": "5.00",
+      "id": 22
     }
   ],
-  "situacao_pedido": [
+  "pedidos": [
     {
       "id": 1,
-      "nome": "Aguardando Pagamento"
+      "cliente": "Rafael Santos",
+      "produto": "Cafe Puro",
+      "valor": 5.9,
+      "status": "Solicitado"
     },
     {
       "id": 2,
-      "nome": "Pagamento Realizado"
+      "cliente": "Arthur",
+      "produto": "Cafe Leite",
+      "valor": 6,
+      "status": "Solicitado"
     },
     {
+      "cliente": "Bolsonaro",
+      "produto": "Quick",
       "id": 3,
-      "nome": "Em produção"
-    },
-    {
-      "id": 4,
-      "nome": "Finalizado Entregue"
-    },
-    {
-      "id": 5,
-      "nome": "Pedido Cancelado"
+      "status": "Em produção"
     }
   ],
   "clientes": [
@@ -90,6 +135,29 @@
     {
       "id": 2,
       "nome": "Joao Paulo"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Pagamento Aprovado"
+    },
+    {
+      "id": 3,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 4,
+      "tipo": "Finalizado"
+    }
+    ,
+    {
+      "id": 5,
+      "tipo": "Cancelado"
     }
   ]
 }
