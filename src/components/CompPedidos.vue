@@ -1,49 +1,48 @@
 <template>
- <div class="container">
-  <div id="cafe-table">
-    <div>
-      <div id="cafe-table-heading">
-        <div class="order-id">#:</div>
-        <div>Cliente:</div>
-        <div>Produto:</div>
-        <div>Valor:</div>
-        <div>Status:</div>
-        <div>Ações:</div>
-      </div>
-    </div>
-    <div id="cafe-table-rows">
-      <div class="cafe-table-row" v-for="cafe in cafes" :key="cafe.id">
-        <div class="order-number">{{ cafe.id }}</div>
-        <div>{{ cafe.cliente }}</div>
-        <div>{{ cafe.produto }}</div>
-        <div>{{ cafe.valor }}</div>
-        <div>
-          <select
-            name="status"
-            class="status"
-            @change="updateCafe($event, cafe.id)"
-          >
-            <option
-              :value="s.tipo"
-              v-for="s in status"
-              :key="s.id"
-              :selected="cafe.status == s.tipo"
-            >
-              {{ s.tipo }}
-              
-            </option>
-          </select>
+  <div class="container">
+    <div id="cafe-table">
+      <div>
+        <div id="cafe-table-heading">
+          <div class="order-id">#:</div>
+          <div>Cliente:</div>
+          <div>Produto:</div>
+          <div>Valor:</div>
+          <div>Status:</div>
+          <div>Ações:</div>
         </div>
+      </div>
+      <div id="cafe-table-rows">
+        <div class="cafe-table-row" v-for="cafe in cafes" :key="cafe.id">
+          <div class="order-number">{{ cafe.id }}</div>
+          <div>{{ cafe.cliente }}</div>
+          <div>{{ cafe.produto }}</div>
+          <div>{{ cafe.total }}</div>
+          <div>
+            <select
+              name="status"
+              class="status"
+              @change="updateCafe($event, cafe.id)"
+            >
+              <option
+                :value="s.tipo"
+                v-for="s in status"
+                :key="s.id"
+                :selected="cafe.status == s.tipo"
+              >
+                {{ s.tipo }}
+              </option>
+            </select>
+          </div>
 
-        <button class="delete-btn" @click="deleteCafe(cafe.id)"  >
-          Cancelar
-        </button>
-        <button class="sucess-btn" @click="deleteCafe(cafe.id)">
-          Entregue
-        </button>
+          <button class="delete-btn" @click="deleteCafe(cafe.id)">
+            Cancelar
+          </button>
+          <button class="sucess-btn" @click="deleteCafe(cafe.id)">
+            Entregue
+          </button>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
