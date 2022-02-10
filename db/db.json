@@ -48,16 +48,19 @@
   ],
   "pedidos": [
     {
-      "id": 1,
-      "cliente": "Rafael Santos",
-      "produto": "Cafe Puro",
-      "valor": 5.9,
-      "status": "Finalizado"
-    },
-    {
-      "cliente": "rafael",
-      "produto": "323",
-      "id": 18
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 3,
+          "qtd": 1
+        }
+      ],
+      "total": "20.50",
+      "cliente": "Jose",
+      "id": 1
     },
     {
       "produtos": [
@@ -68,80 +71,11 @@
         {
           "id": 2,
           "qtd": 1
-        },
-        {
-          "id": 3,
-          "qtd": 1
         }
       ],
-      "total": "30.50",
-      "cliente": "FARRAEL",
-      "id": 19
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
-        },
-        {
-          "id": 3,
-          "qtd": 1
-        }
-      ],
-      "total": "30.50",
-      "cliente": "FARRAEL",
-      "id": 20
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
-        },
-        {
-          "id": 3,
-          "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
-        }
-      ],
-      "total": "35.50",
-      "cliente": "FARRAEL",
-      "id": 21
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
-        },
-        {
-          "id": 3,
-          "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
-        }
-      ],
-      "total": "35.50",
-      "cliente": "FARRAEL",
-      "id": 22
+      "total": "18.50",
+      "cliente": "Rafael",
+      "id": 2
     }
   ],
   "clientes": [

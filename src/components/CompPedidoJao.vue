@@ -1,6 +1,7 @@
 <template>
   <main>
     <section class="items">
+      
       <h4>Selecione os produtos</h4>
       <div
         v-for="(product, index) in this.products"
@@ -30,6 +31,11 @@
     </section>
 
     <section v-if="total() > 0" class="summary">
+        <div class="form-group">
+    <label for="Informe o nome do Cliente "></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" v-model="cliente" aria-describedby="emailHelp" placeholder="Nome Cliente">
+    <small id="emailHelp" class="form-text text-muted">Informe Nome do cliente</small>
+  </div>
       <strong>Resumo do pedido</strong>
       <table>
         <thead>
@@ -90,7 +96,8 @@ export default {
         }
 
         carrinho.total = this.total();
-        carrinho.cliente = "FARRAEL";
+        carrinho.cliente = this.cliente;
+        this.$router.go();
       }
       console.log("carrinho " + carrinho.produtos);
       axios.post("http://localhost:3004/pedidos", carrinho).then((response) => {
