@@ -1,24 +1,30 @@
 <template>
   <div class="conteudo">
     <div class="d-flex justify-content-center">
-      <CompPedido />
+      <CompPedidoJao />
     </div>
     <div class="d-flex justify-content-center">
       <CompPedidos />
     </div>
-</div>
+  </div>
 </template>
 
 
 <script>
 import CompPedidos from "../components/CompPedidos.vue";
-import CompPedido from "../components/CompPedido.vue";
+import CompPedidoJao from "../components/CompPedidoJao.vue";
 
 export default {
   name: "Pedidos",
   components: {
     CompPedidos,
-    CompPedido,
+    CompPedidoJao,
+  },
+
+  computed: {
+    products() {
+      return this.$store.state.products;
+    },
   },
 };
 </script>

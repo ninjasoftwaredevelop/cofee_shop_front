@@ -16,65 +16,6 @@
       "preco": 12
     },
     {
-      "nome": "rara",
-      "id": 4
-    },
-    {
-      "nome": "rafae",
-      "id": 5
-    },
-    {
-      "nome": "3123",
-      "id": 6
-    },
-    {
-      "nome": "13123",
-      "id": 7
-    },
-    {
-      "nome": "rafael",
-      "valor": "",
-      "id": 8
-    },
-    {
-      "nome": "rafael",
-      "id": 9
-    },
-    {
-      "nome": "rafael",
-      "id": 10
-    },
-    {
-      "nome": "rafael ",
-      "preco": "20",
-      "id": 11
-    },
-    {
-      "nome": "132312",
-      "preco": "323",
-      "id": 12
-    },
-    {
-      "nome": "Bruno",
-      "preco": "20",
-      "id": 13
-    },
-    {
-      "nome": "ease",
-      "preco": "ea",
-      "id": 14
-    },
-    {
-      "nome": "qer",
-      "preco": "rw",
-      "id": 15
-    },
-    {
-      "nome": "ewqeqw",
-      "preco": "eqwe",
-      "id": 16
-    },
-    {
       "nome": "qweqw",
       "preco": "eqwe",
       "id": 17
@@ -119,9 +60,88 @@
       "id": 18
     },
     {
-      "cliente": "Joao",
-      "produto": "13123",
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 3,
+          "qtd": 1
+        }
+      ],
+      "total": "30.50",
+      "cliente": "FARRAEL",
       "id": 19
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 3,
+          "qtd": 1
+        }
+      ],
+      "total": "30.50",
+      "cliente": "FARRAEL",
+      "id": 20
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 3,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "35.50",
+      "cliente": "FARRAEL",
+      "id": 21
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 3,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "35.50",
+      "cliente": "FARRAEL",
+      "id": 22
     }
   ],
   "clientes": [
