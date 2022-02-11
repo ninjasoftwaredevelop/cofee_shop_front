@@ -1,9 +1,9 @@
 <template>
-  <div class="conteudo">
+  <div class="container">
     <div class="d-flex justify-content-center">
       <CompPedidoJao />
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="ListagemPedidos">
       <CompPedidos />
     </div>
   </div>
@@ -31,7 +31,9 @@ export default {
 
 
 <style scoped>
-#conteudo {
-  max-width: 100%;
-}
+/* Cria  a Barra de Rolagem dentro da Classe Listagem de Pedidos  */
+  .ListagemPedidos {
+    height: 410px;
+    overflow-y: scroll;
+  }
 </style>

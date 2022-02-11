@@ -1,7 +1,9 @@
 <template>
+  <div class="containerLista">
   <main>
+   
     <section class="items">
-      
+   
       <h4>Selecione os produtos</h4>
       <div
         v-for="(product, index) in this.products"
@@ -60,7 +62,9 @@
       </table>
       <button @click="saveProducts()">Adicionar pedido</button>
     </section>
+    
   </main>
+  </div>
 </template>
 
 <script>
@@ -116,6 +120,7 @@ export default {
 </script>
 
 <style>
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;

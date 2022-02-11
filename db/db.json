@@ -20,70 +20,101 @@
     {
       "produtos": [
         {
+          "id": 1,
+          "qtd": 1
+        }
+      ],
+      "total": "8.50",
+      "status": "Solicitado",
+      "id": 22
+    },
+    {
+      "produtos": [
+        {
           "id": 2,
           "qtd": 1
-        },
+        }
+      ],
+      "total": "10.00",
+      "status": "Solicitado",
+      "id": 23
+    },
+    {
+      "produtos": [
+        {
+          "id": 2,
+          "qtd": 1
+        }
+      ],
+      "total": "10.00",
+      "status": "Solicitado",
+      "id": 24
+    },
+    {
+      "produtos": [
         {
           "id": 22,
           "qtd": 1
         }
       ],
-      "total": "15.00",
-      "cliente": "Juse",
-      "status": "Pagamento Aprovado",
-      "id": 1
+      "total": "5.00",
+      "status": "Solicitado",
+      "id": 25
     },
     {
       "produtos": [
         {
           "id": 1,
           "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
         }
       ],
-      "total": "18.50",
-      "cliente": "rara",
+      "total": "8.50",
       "status": "Solicitado",
-      "id": 4
+      "id": 26
     },
     {
       "produtos": [
         {
           "id": 1,
           "qtd": 1
-        },
+        }
+      ],
+      "total": "8.50",
+      "status": "Solicitado",
+      "id": 27
+    },
+    {
+      "produtos": [
         {
-          "id": 2,
-          "qtd": 1
-        },
-        {
-          "id": 22,
+          "id": 1,
           "qtd": 1
         }
       ],
-      "total": "23.50",
-      "cliente": "Rafael",
+      "total": "8.50",
       "status": "Solicitado",
-      "id": 5
+      "id": 28
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        }
+      ],
+      "total": "8.50",
+      "status": "Solicitado",
+      "id": 29
     },
     {
       "produtos": [
         {
           "id": 2,
           "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
         }
       ],
-      "total": "15.00",
-      "cliente": "rarafae",
+      "total": "10.00",
       "status": "Solicitado",
-      "id": 6
+      "id": 30
     }
   ],
   "status": [
