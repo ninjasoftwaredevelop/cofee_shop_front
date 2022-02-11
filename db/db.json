@@ -14,6 +14,21 @@
       "nome": "Toddy",
       "preco": "5.00",
       "id": 22
+    },
+    {
+      "id": 1,
+      "nome": "Café Tradicional ",
+      "preco": 8.5
+    },
+    {
+      "id": 2,
+      "nome": "Café com leite ",
+      "preco": 10
+    },
+    {
+      "nome": "Toddy",
+      "preco": "5.00",
+      "id": 22
     }
   ],
   "pedidos": [
@@ -22,99 +37,96 @@
         {
           "id": 1,
           "qtd": 1
-        }
-      ],
-      "total": "8.50",
-      "status": "Solicitado",
-      "id": 22
-    },
-    {
-      "produtos": [
+        },
         {
           "id": 2,
           "qtd": 1
-        }
-      ],
-      "total": "10.00",
-      "status": "Solicitado",
-      "id": 23
-    },
-    {
-      "produtos": [
+        },
         {
-          "id": 2,
+          "id": 22,
           "qtd": 1
-        }
-      ],
-      "total": "10.00",
-      "status": "Solicitado",
-      "id": 24
-    },
-    {
-      "produtos": [
+        },
         {
           "id": 22,
           "qtd": 1
         }
       ],
-      "total": "5.00",
+      "total": "28.50",
+      "cliente": "Anotnio",
       "status": "Solicitado",
-      "id": 25
+      "id": 4
     },
     {
       "produtos": [
         {
           "id": 1,
           "qtd": 1
-        }
-      ],
-      "total": "8.50",
-      "status": "Solicitado",
-      "id": 26
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        }
-      ],
-      "total": "8.50",
-      "status": "Solicitado",
-      "id": 27
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        }
-      ],
-      "total": "8.50",
-      "status": "Solicitado",
-      "id": 28
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        }
-      ],
-      "total": "8.50",
-      "status": "Solicitado",
-      "id": 29
-    },
-    {
-      "produtos": [
+        },
         {
           "id": 2,
           "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
         }
       ],
-      "total": "10.00",
+      "total": "23.50",
       "status": "Solicitado",
-      "id": 30
+      "id": 5
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "23.500",
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "23.50",
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "13.50",
+      "status": "Solicitado",
+      "id": 8
     }
   ],
   "status": [

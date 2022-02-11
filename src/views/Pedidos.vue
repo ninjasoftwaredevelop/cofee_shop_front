@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="d-flex justify-content-center">
+    <div class="Pedido">
       <CompPedidoJao />
     </div>
     <div class="ListagemPedidos">
@@ -31,9 +31,11 @@ export default {
 
 
 <style scoped>
-/* Cria  a Barra de Rolagem dentro da Classe Listagem de Pedidos  */
+/* Cria  a Barra de Rolagem dentro da Classe Listagem de Pedidos */
+ 
+
   .ListagemPedidos {
-    height: 410px;
+    height: 310px;
     overflow-y: scroll;
   }
 </style>

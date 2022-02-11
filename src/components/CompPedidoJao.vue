@@ -1,69 +1,75 @@
 <template>
-  <div class="containerLista">
-  <main>
-   
-    <section class="items">
-   
-      <h4>Selecione os produtos</h4>
-      <div
-        v-for="(product, index) in this.products"
-        :key="index"
-        class="product"
-        @click="product.active = !product.active"
-        :class="{ selected: product.active }"
-      >
-        <div class="photo">
-          <img src="../imgs/sem-foto.png" />
-        </div>
-        <div class="description">
-          <span class="name">{{ product.nome }}</span>
-          <span class="price">R$ {{ product.preco }}</span>
-          <div class="quantity-area" v-if="product.active">
-            <button
-              @click.stop="product.quantity--"
-              :disabled="product.quantity <= 1"
-            >
-              -
-            </button>
-            <span class="quantity">{{ product.quantity }}</span>
-            <button @click.stop="product.quantity++">+</button>
+  <div class="pedido">
+    <main>
+      <section class="items">
+        <h4>Selecione os produtos</h4>
+        
+        <div
+          v-for="(product, index) in this.products"
+          :key="index"
+          class="product"
+          @click="product.active = !product.active"
+          :class="{ selected: product.active }"
+        >
+          <div class="photo">
+            <img src="../imgs/sem-foto.png" />
+          </div>
+          <div class="description">
+            <span class="name">{{ product.nome }}</span>
+            <span class="price">R$ {{ product.preco }}</span>
+            <div class="quantity-area" v-if="product.active">
+              <button
+                @click.stop="product.quantity--"
+                :disabled="product.quantity <= 1"
+              >
+                -
+              </button>
+              <span class="quantity">{{ product.quantity }}</span>
+              <button @click.stop="product.quantity++">+</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section v-if="total() > 0" class="summary">
+      <section v-if="total() > 0" class="summary">
         <div class="form-group">
-    <label for="Informe o nome do Cliente "></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" v-model="cliente" aria-describedby="emailHelp" placeholder="Nome Cliente">
-    <small id="emailHelp" class="form-text text-muted">Informe Nome do cliente</small>
-  </div>
-      <strong>Resumo do pedido</strong>
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(product, index) in this.products" :key="index">
-            <template v-if="product.active">
-              <td>{{ product.quantity + "x " + product.nome }}</td>
-              <td>{{ (product.quantity * product.preco).toFixed(2) }}</td>
-            </template>
-          </tr>
+          <label for="Informe o nome do Cliente "></label>
+          <input
+            type="text"
+            class="form-control"
+            id="nomeCliente"
+            v-model="cliente"
+            placeholder="Nome Cliente"
+          />
+          <small id="nomeCliente" class="form-text text-muted"
+            >Informe Nome do cliente</small
+          >
+        </div>
+        <strong>Resumo do pedido</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(product, index) in this.products" :key="index">
+              <template v-if="product.active">
+                <td>{{ product.quantity + "x " + product.nome }}</td>
+                <td>{{ (product.quantity * product.preco).toFixed(2) }}</td>
+              </template>
+            </tr>
 
-          <tr>
-            <th>Total</th>
-            <th> {{ total() }}</th>
-          </tr>
-        </tbody>
-      </table>
-      <button @click="saveProducts()">Adicionar pedido</button>
-    </section>
-    
-  </main>
+            <tr>
+              <th>Total</th>
+              <th>{{ total() }}</th>
+            </tr>
+          </tbody>
+        </table>
+        <button @click="saveProducts()">Adicionar pedido</button>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -81,8 +87,8 @@ export default {
         }
       });
       return total.toFixed(2);
-    },
-
+    },    
+   
     saveProducts() {
       let carrinho = new Object();
       carrinho.produtos = [];
@@ -101,7 +107,7 @@ export default {
 
         carrinho.total = this.total();
         carrinho.cliente = this.cliente;
-        carrinho.status = "Solicitado"
+        carrinho.status = "Solicitado";
         this.$router.go();
       }
       console.log("carrinho " + carrinho.produtos);
@@ -120,7 +126,6 @@ export default {
 </script>
 
 <style>
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -130,7 +135,7 @@ main > section.items h4 {
   text-align: center;
   margin-top: 0;
   width: 100%;
-  color: rgba(233, 129, 11, 0.541);
+  color: 4px solid #fcba03;
 }
 main {
   display: flex;
@@ -143,7 +148,7 @@ main {
 main > section.items {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid rgba(233, 129, 11, 0.541);
+  border: 2px solid #fcba03;
   padding: 20px;
   max-width: 500px;
   min-width: 300px;
@@ -159,7 +164,7 @@ section.items .product {
 }
 
 section.items .product.selected {
-  border: 2px solid rgba(233, 129, 11, 0.541);
+  border: 2px solid #fcba03;
 }
 
 section.items .photo img {
@@ -200,7 +205,7 @@ section.items .description .quantity-area .quantity {
 }
 
 section.summary {
-  background-color: rgba(233, 129, 11, 0.541);
+  background-color: #fcba03;
   padding: 20px;
   min-height: 200px;
   min-width: 200px;
@@ -219,4 +224,7 @@ section.summary table tbody tr:last-of-type th {
   border-top: 1px solid black;
   padding-top: 4px;
 }
+
+ 
+
 </style>

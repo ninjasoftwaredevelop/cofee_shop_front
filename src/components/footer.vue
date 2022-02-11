@@ -13,9 +13,10 @@ export default {
 <style scoped>
     #footer {
         height: 100px;
-        background-color:#673400;
-        background-image: linear-gradient(to bottom, transparent, rgba(#B5651D));
-        border-bottom: 4px solid #111;
+        background-color:#030303;
+       
+        border-bottom: 4px solid #fcba03;
+        border-top: 4px solid #fcba03;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,5 +27,6 @@ export default {
     }
     #footer h4 {
         color: #fcba03;
+        font-size: 22px;
     }
 </style>
