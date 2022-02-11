@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    
     <div id="cafe-table">
       <div>
         <div id="cafe-table-heading">
@@ -35,7 +36,7 @@
           </div>
 
           <button
-           
+            v-show=validaSituacao(cafe.status)
             class="delete-btn"
             
             @click="deleteCafe(cafe.id)"
@@ -65,6 +66,13 @@ export default {
     };
   },
   methods: {
+    
+    validaSituacao(z){
+     if  (z == "Solicitado"){
+       return true }
+      
+     
+    },
     async getPedidos() {
       const req = await fetch("http://localhost:3004/pedidos");
       const data = await req.json();
