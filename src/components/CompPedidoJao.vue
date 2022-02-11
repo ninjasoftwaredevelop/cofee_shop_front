@@ -54,7 +54,7 @@
 
           <tr>
             <th>Total</th>
-            <th>{{ total() }}</th>
+            <th> {{ total() }}</th>
           </tr>
         </tbody>
       </table>
@@ -97,6 +97,7 @@ export default {
 
         carrinho.total = this.total();
         carrinho.cliente = this.cliente;
+        carrinho.status = "Solicitado"
         this.$router.go();
       }
       console.log("carrinho " + carrinho.produtos);

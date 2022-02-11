@@ -11,36 +11,6 @@
       "preco": 10
     },
     {
-      "id": 3,
-      "nome": "Capuccino ",
-      "preco": 12
-    },
-    {
-      "nome": "qweqw",
-      "preco": "eqwe",
-      "id": 17
-    },
-    {
-      "nome": "qweqw",
-      "preco": "eqweqw",
-      "id": 18
-    },
-    {
-      "nome": "eqwe",
-      "preco": "eqw",
-      "id": 19
-    },
-    {
-      "nome": "123",
-      "preco": "123",
-      "id": 20
-    },
-    {
-      "nome": "ew",
-      "preco": "ewe",
-      "id": 21
-    },
-    {
       "nome": "Toddy",
       "preco": "5.00",
       "id": 22
@@ -50,16 +20,17 @@
     {
       "produtos": [
         {
-          "id": 1,
+          "id": 2,
           "qtd": 1
         },
         {
-          "id": 3,
+          "id": 22,
           "qtd": 1
         }
       ],
-      "total": "20.50",
-      "cliente": "Jose",
+      "total": "15.00",
+      "cliente": "Juse",
+      "status": "Solicitado",
       "id": 1
     },
     {
@@ -74,18 +45,29 @@
         }
       ],
       "total": "18.50",
-      "cliente": "Rafael",
-      "id": 2
-    }
-  ],
-  "clientes": [
-    {
-      "id": 1,
-      "nome": "Rafael Santos"
+      "cliente": "rara",
+      "status": "Solicitado",
+      "id": 4
     },
     {
-      "id": 2,
-      "nome": "Joao Paulo"
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1
+        },
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "23.50",
+      "cliente": "Rafael",
+      "status": "Solicitado",
+      "id": 5
     }
   ],
   "status": [

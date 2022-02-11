@@ -16,7 +16,7 @@
           <div class="order-number">{{ cafe.id }}</div>
           <div>{{ cafe.cliente }}</div>
           <div>{{ cafe.produto }}</div>
-          <div>{{ cafe.total }}</div>
+          <div>R$ {{ cafe.total }}</div>
           <div>
             <select
               name="status"
@@ -34,10 +34,16 @@
             </select>
           </div>
 
-          <button class="delete-btn" @click="deleteCafe(cafe.id)">
+          <button
+           
+            class="delete-btn"
+            
+            @click="deleteCafe(cafe.id)"
+          >
             Cancelar
           </button>
           <button class="sucess-btn" @click="deleteCafe(cafe.id)">
+            
             Entregue
           </button>
         </div>
@@ -63,6 +69,12 @@ export default {
       const data = await req.json();
       this.cafes = data;
       this.getStatus();
+    },
+    verificaSituacao() {
+     if (this == "Solicitado"){
+        return true
+     } else return false
+     
     },
     async getStatus() {
       const req = await fetch("http://localhost:3004/status");

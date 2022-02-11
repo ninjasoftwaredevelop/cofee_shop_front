@@ -22,7 +22,7 @@
         />
       </div>
       <div class="input-container">
-        <input class="submit-btn" type="submit" value="Criar meu Pedido!" />
+        <input class="submit-btn" type="submit" value="Criar meu Pedido!" v-model="status" />
       </div>
     </form>
   </div>
@@ -34,21 +34,19 @@ export default {
   data() {
     return {
      cliente: null,
-      produto: null,
-      status: "Solicitado",
+     produto: null,
+     status: null,
     };
   },
   methods: {
-    async getPedidos() {
-      const req = await fetch("http://localhost:3004/pedidos");
-      const data = await req.json();
-      this.cafes = data;
-    },
+   
     async createPedido(e) {
       e.preventDefault();
       const data = {
         cliente: this.cliente,
         produto: this.produto,
+        status: "Solicitado"
+        
       };
       const dataJson = JSON.stringify(data);
       const req = await fetch("http://localhost:3004/pedidos", {
@@ -69,7 +67,7 @@ export default {
 </script>
 
 <style scoped>
-#burger-form {
+#pedido-form {
   max-width: 400px;
   margin: 0 auto;
 }
