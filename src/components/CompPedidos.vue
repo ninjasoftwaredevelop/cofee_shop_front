@@ -109,6 +109,7 @@ export default {
 #cafe-table {
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 #cafe-table-heading,
 #cafe-table-rows,
