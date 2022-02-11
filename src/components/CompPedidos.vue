@@ -57,6 +57,7 @@ export default {
   name: "CompPedidos",
   data() {
     return {
+     
       cafes: null,
       cafes_id: null,
       status: [],
@@ -69,17 +70,15 @@ export default {
       const data = await req.json();
       this.cafes = data;
       this.getStatus();
-    },
-    verificaSituacao() {
-     if (this == "Solicitado"){
-        return true
-     } else return false
-     
+      
+    
+  
     },
     async getStatus() {
       const req = await fetch("http://localhost:3004/status");
       const data = await req.json();
       this.status = data;
+      this.verificaSituacao()
     },
     async deleteCafe(id) {
       const req = await fetch(`http://localhost:3004/pedidos/${id}`, {

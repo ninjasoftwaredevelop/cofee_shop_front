@@ -30,7 +30,7 @@
       ],
       "total": "15.00",
       "cliente": "Juse",
-      "status": "Solicitado",
+      "status": "Pagamento Aprovado",
       "id": 1
     },
     {
@@ -68,6 +68,22 @@
       "cliente": "Rafael",
       "status": "Solicitado",
       "id": 5
+    },
+    {
+      "produtos": [
+        {
+          "id": 2,
+          "qtd": 1
+        },
+        {
+          "id": 22,
+          "qtd": 1
+        }
+      ],
+      "total": "15.00",
+      "cliente": "rarafae",
+      "status": "Solicitado",
+      "id": 6
     }
   ],
   "status": [

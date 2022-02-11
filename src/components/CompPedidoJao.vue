@@ -15,7 +15,7 @@
         </div>
         <div class="description">
           <span class="name">{{ product.nome }}</span>
-          <span class="price">{{ product.preco }}</span>
+          <span class="price">R$ {{ product.preco }}</span>
           <div class="quantity-area" v-if="product.active">
             <button
               @click.stop="product.quantity--"
