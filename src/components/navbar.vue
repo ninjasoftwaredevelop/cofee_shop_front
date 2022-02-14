@@ -22,10 +22,10 @@ export default {
 </script>
 <style scoped>
     #nav {
-    background-color:#673400;
-    background-image: linear-gradient(to bottom, transparent, rgba(#B5651D));
-    border-bottom: 4px solid #111;
-    padding: 15px 50px;
+    background-color:#000000;
+    border-bottom: 4px solid #fcba03;
+    border-top: 4px solid #fcba03;
+    padding: 1px 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -43,7 +43,7 @@ export default {
     text-decoration: none;
     margin: 12px;
     transition: .5s;
-    font-size: 25px;
+    font-size: 22px;
   }
   #nav a:hover {
     color: #FFF;

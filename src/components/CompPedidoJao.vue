@@ -1,8 +1,10 @@
 <template>
-  <div class="containerLista">
+  <div class="pedido">
     <main>
       <section class="items">
         <h4>Selecione os produtos</h4>
+        
+
         <div
           v-for="(product, index) in this.products"
           :key="index"
@@ -34,14 +36,14 @@
         <div class="form-group">
           <label for="Informe o nome do Cliente "></label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            id="exampleInputEmail1"
+            id="nomeCliente"
             v-model="cliente"
-            aria-describedby="emailHelp"
             placeholder="Nome Cliente"
           />
-          <small id="emailHelp" class="form-text text-muted"
+          <small id="nomeCliente" class="form-text text-muted"
+
             >Informe Nome do cliente</small
           >
         </div>
@@ -87,8 +89,8 @@ export default {
         }
       });
       return total.toFixed(2);
-    },
-
+    },    
+   
     saveProducts() {
       let carrinho = {};
       carrinho.produtos = [];
@@ -140,7 +142,7 @@ main > section.items h4 {
   text-align: center;
   margin-top: 0;
   width: 100%;
-  color: rgba(233, 129, 11, 0.541);
+  color: 4px solid #fcba03;
 }
 main {
   display: flex;
@@ -153,7 +155,7 @@ main {
 main > section.items {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid rgba(233, 129, 11, 0.541);
+  border: 2px solid #fcba03;
   padding: 20px;
   max-width: 500px;
   min-width: 300px;
@@ -169,7 +171,7 @@ section.items .product {
 }
 
 section.items .product.selected {
-  border: 2px solid rgba(233, 129, 11, 0.541);
+  border: 2px solid #fcba03;
 }
 
 section.items .photo img {
@@ -210,7 +212,7 @@ section.items .description .quantity-area .quantity {
 }
 
 section.summary {
-  background-color: rgba(233, 129, 11, 0.541);
+  background-color: #fcba03;
   padding: 20px;
   min-height: 200px;
   min-width: 200px;
@@ -229,4 +231,7 @@ section.summary table tbody tr:last-of-type th {
   border-top: 1px solid black;
   padding-top: 4px;
 }
+
+ 
+
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <section v-if="pedido" class="modal_summary">
       <div class="modal_container">
         <button class="modal_fechar" @click="pedido = null">X</button>
@@ -28,6 +29,8 @@
         </table>
       </div>
     </section>
+=======
+    
     <div id="cafe-table">
       <div>
         <div id="cafe-table-heading">
@@ -64,7 +67,16 @@
             </select>
           </div>
 
+
           <button class="delete-btn" @click="deleteCafe(cafe.id)">
+
+          <button
+            v-show=validaSituacao(cafe.status)
+            class="delete-btn"
+            
+            @click="deleteCafe(cafe.id)"
+          >
+
             Cancelar
           </button>
           <button class="sucess-btn" @click="deleteCafe(cafe.id)">
@@ -89,10 +101,19 @@ export default {
     };
   },
   methods: {
+
     async getPedido(id) {
       const req = await fetch(`http://localhost:3004/pedidos/${id}`);
       const data = await req.json();
       this.pedido = data;
+
+    
+    validaSituacao(z){
+     if  (z == "Solicitado"){
+       return true }
+      
+     
+
     },
     async getPedidos() {
       const req = await fetch("http://localhost:3004/pedidos");
