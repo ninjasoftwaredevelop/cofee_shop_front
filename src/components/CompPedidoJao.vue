@@ -1,69 +1,75 @@
 <template>
   <div class="containerLista">
-  <main>
-   
-    <section class="items">
-   
-      <h4>Selecione os produtos</h4>
-      <div
-        v-for="(product, index) in this.products"
-        :key="index"
-        class="product"
-        @click="product.active = !product.active"
-        :class="{ selected: product.active }"
-      >
-        <div class="photo">
-          <img src="../imgs/sem-foto.png" />
-        </div>
-        <div class="description">
-          <span class="name">{{ product.nome }}</span>
-          <span class="price">R$ {{ product.preco }}</span>
-          <div class="quantity-area" v-if="product.active">
-            <button
-              @click.stop="product.quantity--"
-              :disabled="product.quantity <= 1"
-            >
-              -
-            </button>
-            <span class="quantity">{{ product.quantity }}</span>
-            <button @click.stop="product.quantity++">+</button>
+    <main>
+      <section class="items">
+        <h4>Selecione os produtos</h4>
+        <div
+          v-for="(product, index) in this.products"
+          :key="index"
+          class="product"
+          @click="product.active = !product.active"
+          :class="{ selected: product.active }"
+        >
+          <div class="photo">
+            <img src="../imgs/sem-foto.png" />
+          </div>
+          <div class="description">
+            <span class="name">{{ product.nome }}</span>
+            <span class="price">R$ {{ product.preco }}</span>
+            <div class="quantity-area" v-if="product.active">
+              <button
+                @click.stop="product.quantity--"
+                :disabled="product.quantity <= 1"
+              >
+                -
+              </button>
+              <span class="quantity">{{ product.quantity }}</span>
+              <button @click.stop="product.quantity++">+</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section v-if="total() > 0" class="summary">
+      <section v-if="total() > 0" class="summary">
         <div class="form-group">
-    <label for="Informe o nome do Cliente "></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" v-model="cliente" aria-describedby="emailHelp" placeholder="Nome Cliente">
-    <small id="emailHelp" class="form-text text-muted">Informe Nome do cliente</small>
-  </div>
-      <strong>Resumo do pedido</strong>
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(product, index) in this.products" :key="index">
-            <template v-if="product.active">
-              <td>{{ product.quantity + "x " + product.nome }}</td>
-              <td>{{ (product.quantity * product.preco).toFixed(2) }}</td>
-            </template>
-          </tr>
+          <label for="Informe o nome do Cliente "></label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            v-model="cliente"
+            aria-describedby="emailHelp"
+            placeholder="Nome Cliente"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Informe Nome do cliente</small
+          >
+        </div>
+        <strong>Resumo do pedido</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(product, index) in this.products" :key="index">
+              <template v-if="product.active">
+                <td>{{ product.quantity + "x " + product.nome }}</td>
+                <td>{{ (product.quantity * product.preco).toFixed(2) }}</td>
+              </template>
+            </tr>
 
-          <tr>
-            <th>Total</th>
-            <th> {{ total() }}</th>
-          </tr>
-        </tbody>
-      </table>
-      <button @click="saveProducts()">Adicionar pedido</button>
-    </section>
-    
-  </main>
+            <tr>
+              <th>Total</th>
+              <th>{{ total() }}</th>
+            </tr>
+          </tbody>
+        </table>
+        <button @click="saveProducts()">Adicionar pedido</button>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -84,24 +90,29 @@ export default {
     },
 
     saveProducts() {
-      let carrinho = new Object();
+      let carrinho = {};
       carrinho.produtos = [];
 
-      let produto = new Object();
+      let produto = {};
 
       for (let i = 0; i < this.products.length; i++) {
         if (this.products[i].active) {
           produto.id = this.products[i].id;
           produto.qtd = this.products[i].quantity;
+          produto.preco = this.products[i].preco;
+          produto.nome = this.products[i].nome;
+
           carrinho.produtos.push({
             id: this.products[i].id,
             qtd: this.products[i].quantity,
+            valor: this.products[i].preco,
+            nome: this.products[i].nome,
           });
         }
 
         carrinho.total = this.total();
         carrinho.cliente = this.cliente;
-        carrinho.status = "Solicitado"
+        carrinho.status = "Solicitado";
         this.$router.go();
       }
       console.log("carrinho " + carrinho.produtos);
@@ -120,7 +131,6 @@ export default {
 </script>
 
 <style>
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
