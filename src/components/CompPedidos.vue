@@ -1,5 +1,35 @@
 <template>
   <div class="container">
+
+    <section v-if="pedido" class="modal_summary">
+      <div class="modal_container">
+        <button class="modal_fechar" @click="pedido = null">X</button>
+        <strong>Resumo do pedido</strong>
+        <table class="tbl_modal">
+          <thead>
+            <tr>
+              <th>Qtd</th>
+              <th>Item</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <div>
+              <tr v-for="produto in this.pedido.produtos" :key="produto.id">
+                <td>{{ produto.qtd }}</td>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.qtd * produto.valor }}</td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <th>{{ pedido.total }}</th>
+              </tr>
+            </div>
+          </tbody>
+        </table>
+      </div>
+    </section>
+=======
     
     <div id="cafe-table">
       <div>
@@ -16,7 +46,9 @@
         <div class="cafe-table-row" v-for="cafe in cafes" :key="cafe.id">
           <div class="order-number">{{ cafe.id }}</div>
           <div>{{ cafe.cliente }}</div>
-          <div>{{ cafe.produto }}</div>
+          <div class="itens_pedido" @click="getPedido(cafe.id)">
+            Itens do Pedidos
+          </div>
           <div>R$ {{ cafe.total }}</div>
           <div>
             <select
@@ -35,16 +67,19 @@
             </select>
           </div>
 
+
+          <button class="delete-btn" @click="deleteCafe(cafe.id)">
+
           <button
             v-show=validaSituacao(cafe.status)
             class="delete-btn"
             
             @click="deleteCafe(cafe.id)"
           >
+
             Cancelar
           </button>
           <button class="sucess-btn" @click="deleteCafe(cafe.id)">
-            
             Entregue
           </button>
         </div>
@@ -58,35 +93,39 @@ export default {
   name: "CompPedidos",
   data() {
     return {
-     
       cafes: null,
       cafes_id: null,
       status: [],
       teste: true,
+      pedido: null,
     };
   },
   methods: {
+
+    async getPedido(id) {
+      const req = await fetch(`http://localhost:3004/pedidos/${id}`);
+      const data = await req.json();
+      this.pedido = data;
+
     
     validaSituacao(z){
      if  (z == "Solicitado"){
        return true }
       
      
+
     },
     async getPedidos() {
       const req = await fetch("http://localhost:3004/pedidos");
       const data = await req.json();
       this.cafes = data;
       this.getStatus();
-      
-    
-  
     },
     async getStatus() {
       const req = await fetch("http://localhost:3004/status");
       const data = await req.json();
       this.status = data;
-      this.verificaSituacao()
+      this.verificaSituacao();
     },
     async deleteCafe(id) {
       const req = await fetch(`http://localhost:3004/pedidos/${id}`, {
@@ -117,7 +156,6 @@ export default {
 #cafe-table {
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 #cafe-table-heading,
 #cafe-table-rows,
@@ -178,5 +216,43 @@ select {
 .sucess-btn:hover {
   background-color: transparent;
   color: #222;
+}
+
+.modal_summary::before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal_summary {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 80px;
+}
+.modal_container {
+  position: relative;
+  z-index: 1;
+  background: white;
+}
+.modal_fechar {
+  border-radius: 50%;
+  border: 2px solid #000;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+.itens_pedido {
+  cursor: pointer;
 }
 </style>

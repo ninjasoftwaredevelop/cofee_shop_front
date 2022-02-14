@@ -4,6 +4,7 @@
       <section class="items">
         <h4>Selecione os produtos</h4>
         
+
         <div
           v-for="(product, index) in this.products"
           :key="index"
@@ -42,6 +43,7 @@
             placeholder="Nome Cliente"
           />
           <small id="nomeCliente" class="form-text text-muted"
+
             >Informe Nome do cliente</small
           >
         </div>
@@ -90,18 +92,23 @@ export default {
     },    
    
     saveProducts() {
-      let carrinho = new Object();
+      let carrinho = {};
       carrinho.produtos = [];
 
-      let produto = new Object();
+      let produto = {};
 
       for (let i = 0; i < this.products.length; i++) {
         if (this.products[i].active) {
           produto.id = this.products[i].id;
           produto.qtd = this.products[i].quantity;
+          produto.preco = this.products[i].preco;
+          produto.nome = this.products[i].nome;
+
           carrinho.produtos.push({
             id: this.products[i].id,
             qtd: this.products[i].quantity,
+            valor: this.products[i].preco,
+            nome: this.products[i].nome,
           });
         }
 
