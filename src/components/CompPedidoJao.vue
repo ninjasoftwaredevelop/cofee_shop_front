@@ -3,7 +3,6 @@
     <main>
       <section class="items">
         <h4>Selecione os produtos</h4>
-        
 
         <div
           v-for="(product, index) in this.products"
@@ -32,6 +31,8 @@
         </div>
       </section>
 
+      <h1>Commit Jão</h1>
+
       <section v-if="total() > 0" class="summary">
         <div class="form-group">
           <label for="Informe o nome do Cliente "></label>
@@ -43,7 +44,6 @@
             placeholder="Nome Cliente"
           />
           <small id="nomeCliente" class="form-text text-muted"
-
             >Informe Nome do cliente</small
           >
         </div>
@@ -89,8 +89,8 @@ export default {
         }
       });
       return total.toFixed(2);
-    },    
-   
+    },
+
     saveProducts() {
       let carrinho = {};
       carrinho.produtos = [];
@@ -231,7 +231,4 @@ section.summary table tbody tr:last-of-type th {
   border-top: 1px solid black;
   padding-top: 4px;
 }
-
- 
-
 </style>
