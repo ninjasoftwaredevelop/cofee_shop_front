@@ -12,7 +12,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="produto">Rafael Passou por aki</label>
+        <label for="produto">Joao bilisca Azuleja</label>
         <input
           type="text"
           id="nome"
