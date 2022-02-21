@@ -12,7 +12,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="produto">Escolha a bebida :</label>
+        <label for="produto">Rafael Passou por aki</label>
         <input
           type="text"
           id="nome"
