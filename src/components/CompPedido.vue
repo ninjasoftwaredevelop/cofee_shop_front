@@ -12,7 +12,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="produto">Escolha a bebida :</label>
+        <label for="produto">fudendo o projeto :</label>
         <input
           type="text"
           id="nome"
@@ -22,7 +22,12 @@
         />
       </div>
       <div class="input-container">
-        <input class="submit-btn" type="submit" value="Criar meu Pedido!" v-model="status" />
+        <input
+          class="submit-btn"
+          type="submit"
+          value="Criar meu Pedido!"
+          v-model="status"
+        />
       </div>
     </form>
   </div>
@@ -33,20 +38,18 @@ export default {
   name: "CompPedido",
   data() {
     return {
-     cliente: null,
-     produto: null,
-     status: null,
+      cliente: null,
+      produto: null,
+      status: null,
     };
   },
   methods: {
-   
     async createPedido(e) {
       e.preventDefault();
       const data = {
         cliente: this.cliente,
         produto: this.produto,
-        status: "Solicitado"
-        
+        status: "Solicitado",
       };
       const dataJson = JSON.stringify(data);
       const req = await fetch("http://localhost:3004/pedidos", {
