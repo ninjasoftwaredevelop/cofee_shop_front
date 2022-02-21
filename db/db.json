@@ -2,7 +2,7 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Café Tradicional ",
+      "nome": "Café do Rafão",
       "preco": 8.5
     },
     {
@@ -36,26 +36,6 @@
       "produtos": [
         {
           "id": 22,
-          "qtd": 2,
-          "valor": "5.00",
-          "nome": "Toddy"
-        },
-        {
-          "id": 22,
-          "qtd": 2,
-          "valor": "5.00",
-          "nome": "Toddy"
-        }
-      ],
-      "total": "20.00",
-      "cliente": "que isso",
-      "status": "Em produção",
-      "id": 1
-    },
-    {
-      "produtos": [
-        {
-          "id": 22,
           "qtd": 1,
           "valor": "5.00",
           "nome": "Toddy"
@@ -75,7 +55,7 @@
       ],
       "total": "18.50",
       "cliente": "sasasa",
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 2
     },
     {
