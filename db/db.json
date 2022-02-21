@@ -35,98 +35,73 @@
     {
       "produtos": [
         {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
+          "id": 22,
+          "qtd": 2,
+          "valor": "5.00",
+          "nome": "Toddy"
         },
         {
           "id": 22,
-          "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
+          "qtd": 2,
+          "valor": "5.00",
+          "nome": "Toddy"
         }
       ],
-      "total": "28.50",
-      "cliente": "Anotnio",
-      "status": "Solicitado",
-      "id": 4
+      "total": "20.00",
+      "cliente": "que isso",
+      "status": "Em produção",
+      "id": 1
     },
     {
       "produtos": [
         {
-          "id": 1,
-          "qtd": 1
+          "id": 22,
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
         },
         {
-          "id": 2,
-          "qtd": 1
+          "id": 1,
+          "qtd": 1,
+          "valor": 8.5,
+          "nome": "Café Tradicional "
         },
         {
           "id": 22,
-          "qtd": 1
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
         }
       ],
-      "total": "23.50",
+      "total": "18.50",
+      "cliente": "sasasa",
       "status": "Solicitado",
-      "id": 5
+      "id": 2
     },
     {
       "produtos": [
         {
-          "id": 1,
-          "qtd": 1
+          "id": 2,
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
         },
         {
           "id": 2,
-          "qtd": 1
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
         },
         {
           "id": 22,
-          "qtd": 1
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
         }
       ],
-      "total": "23.500",
+      "total": "25.00",
       "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 2,
-          "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
-        }
-      ],
-      "total": "23.50",
-      "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "produtos": [
-        {
-          "id": 1,
-          "qtd": 1
-        },
-        {
-          "id": 22,
-          "qtd": 1
-        }
-      ],
-      "total": "13.50",
-      "status": "Solicitado",
-      "id": 8
+      "id": 3
     }
   ],
   "status": [
