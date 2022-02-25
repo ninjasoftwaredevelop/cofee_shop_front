@@ -28,7 +28,6 @@
         </table>
       </div>
     </section>
-    <h1>João porra ai</h1>
     <div id="cafe-table">
       <div>
         <div id="cafe-table-heading">

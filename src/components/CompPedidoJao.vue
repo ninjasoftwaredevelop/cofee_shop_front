@@ -31,8 +31,6 @@
         </div>
       </section>
 
-      <h1>Commit Jão</h1>
-
       <section v-if="total() > 0" class="summary">
         <div class="form-group">
           <label for="Informe o nome do Cliente "></label>
@@ -67,9 +65,24 @@
               <th>Total</th>
               <th>{{ total() }}</th>
             </tr>
+
+            <tr>
+              <th>
+                <label for="pgt">Forma de pagamento:</label>
+              </th>
+              <th>
+                <select v-model="payment_method">
+                  <option value="cartao">Cartão</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                  <option value="Pix">Pix</option>
+                </select>
+              </th>
+            </tr>
           </tbody>
         </table>
-        <button @click="saveProducts()">Adicionar pedido</button>
+        <button class="btnSalvar" @click="saveProducts()">
+          Adicionar pedido
+        </button>
       </section>
     </main>
   </div>
@@ -114,13 +127,13 @@ export default {
 
         carrinho.total = this.total();
         carrinho.cliente = this.cliente;
-        carrinho.status = "Solicitado";
+        carrinho.status = "Pago";
+        carrinho.payment_method = this.payment_method;
         this.$router.go();
       }
-      console.log("carrinho " + carrinho.produtos);
-      axios.post("http://localhost:3004/pedidos", carrinho).then((response) => {
-        console.log(response);
-      });
+      axios
+        .post("http://localhost:3004/pedidos", carrinho)
+        .then((response) => {});
     },
   },
 
@@ -230,5 +243,8 @@ section.summary table {
 section.summary table tbody tr:last-of-type th {
   border-top: 1px solid black;
   padding-top: 4px;
+}
+.btnSalvar {
+  margin-top: 10px;
 }
 </style>

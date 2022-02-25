@@ -35,6 +35,66 @@
     {
       "produtos": [
         {
+          "id": 2,
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
+        },
+        {
+          "id": 1,
+          "qtd": 2,
+          "valor": 8.5,
+          "nome": "Café Tradicional "
+        }
+      ],
+      "total": "27.00",
+      "cliente": "aaaaa",
+      "status": "Solicitado",
+      "payment_method": "cartao",
+      "id": 1
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 4,
+          "valor": 8.5,
+          "nome": "Café do Rafão"
+        },
+        {
+          "id": 2,
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
+        },
+        {
+          "id": 2,
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
+        },
+        {
+          "id": 22,
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
+        }
+      ],
+      "total": "59.00",
+      "cliente": "Jaum",
+      "status": "Pago",
+      "payment_method": "cartao",
+      "id": 2
+    },
+    {
+      "produtos": [
+        {
+          "id": 2,
+          "qtd": 1,
+          "valor": 10,
+          "nome": "Café com leite "
+        },
+        {
           "id": 22,
           "qtd": 1,
           "valor": "5.00",
@@ -53,56 +113,28 @@
           "nome": "Toddy"
         }
       ],
-      "total": "18.50",
-      "cliente": "sasasa",
-      "status": "Finalizado",
-      "id": 2
-    },
-    {
-      "produtos": [
-        {
-          "id": 2,
-          "qtd": 1,
-          "valor": 10,
-          "nome": "Café com leite "
-        },
-        {
-          "id": 2,
-          "qtd": 1,
-          "valor": 10,
-          "nome": "Café com leite "
-        },
-        {
-          "id": 22,
-          "qtd": 1,
-          "valor": "5.00",
-          "nome": "Toddy"
-        }
-      ],
-      "total": "25.00",
-      "status": "Solicitado",
+      "total": "28.50",
+      "cliente": "Marcos",
+      "status": "Pago",
+      "payment_method": "Pix",
       "id": 3
     }
   ],
   "status": [
     {
       "id": 1,
-      "tipo": "Solicitado"
-    },
-    {
-      "id": 2,
       "tipo": "Pagamento Aprovado"
     },
     {
-      "id": 3,
+      "id": 2,
       "tipo": "Em produção"
     },
     {
-      "id": 4,
+      "id": 3,
       "tipo": "Finalizado"
     },
     {
-      "id": 5,
+      "id": 4,
       "tipo": "Cancelado"
     }
   ]
