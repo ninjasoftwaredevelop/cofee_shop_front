@@ -35,27 +35,6 @@
     {
       "produtos": [
         {
-          "id": 2,
-          "qtd": 1,
-          "valor": 10,
-          "nome": "Café com leite "
-        },
-        {
-          "id": 1,
-          "qtd": 2,
-          "valor": 8.5,
-          "nome": "Café Tradicional "
-        }
-      ],
-      "total": "27.00",
-      "cliente": "aaaaa",
-      "status": "Solicitado",
-      "payment_method": "cartao",
-      "id": 1
-    },
-    {
-      "produtos": [
-        {
           "id": 1,
           "qtd": 4,
           "valor": 8.5,
@@ -115,9 +94,36 @@
       ],
       "total": "28.50",
       "cliente": "Marcos",
-      "status": "Pago",
+      "status": "Em produção",
       "payment_method": "Pix",
       "id": 3
+    },
+    {
+      "produtos": [
+        {
+          "id": 1,
+          "qtd": 1,
+          "valor": 8.5,
+          "nome": "Café do Rafão"
+        },
+        {
+          "id": 22,
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
+        },
+        {
+          "id": 22,
+          "qtd": 1,
+          "valor": "5.00",
+          "nome": "Toddy"
+        }
+      ],
+      "total": "18.50",
+      "cliente": "aaa",
+      "status": "Pago",
+      "payment_method": "cartao",
+      "id": 4
     }
   ],
   "status": [

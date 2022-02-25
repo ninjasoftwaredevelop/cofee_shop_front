@@ -29,16 +29,15 @@
       </div>
     </section>
     <div id="cafe-table">
-      <div>
-        <div id="cafe-table-heading">
-          <div class="order-id">#:</div>
-          <div>Cliente:</div>
-          <div>Produto:</div>
-          <div>Valor:</div>
-          <div>Status:</div>
-          <div>Ações:</div>
-        </div>
+      <div id="cafe-table-heading">
+        <div class="order-id">#:</div>
+        <div>Cliente:</div>
+        <div>Produto:</div>
+        <div>Valor:</div>
+        <div>Status:</div>
+        <div>Ações:</div>
       </div>
+
       <div id="cafe-table-rows">
         <div class="cafe-table-row" v-for="cafe in cafes" :key="cafe.id">
           <div class="order-number">{{ cafe.id }}</div>
@@ -138,6 +137,8 @@ export default {
 
 <style scoped>
 #cafe-table {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -166,7 +167,7 @@ export default {
   width: 5%;
 }
 select {
-  padding: 12px 6px;
+  padding: 8px 3px;
   margin-right: 12px;
 }
 .delete-btn {
@@ -175,7 +176,7 @@ select {
   font-weight: bold;
   border: 2px solid #222;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1em;
   margin: auto auto;
   cursor: pointer;
   transition: 0.5s;
@@ -192,7 +193,7 @@ select {
   font-weight: bold;
   border: 2px solid #222;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1em;
   margin: 0 auto;
   cursor: pointer;
   transition: 0.5s;
